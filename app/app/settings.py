@@ -79,7 +79,7 @@ DATABASES = {
        'HOST': os.environ.get('DB_HOST'), #DBHOST volume
        'NAME': os.environ.get('DB_NAME'),
        'USER': os.environ.get('DB_USER'),
-       'PASSWORD': os.engine.get('DB_PASS')
+       'PASSWORD': os.environ.get('DB_PASS')
 
 
     }
