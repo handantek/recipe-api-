@@ -1,6 +1,8 @@
 """
 Serializers for the user API View.
 
+serializer modelden veri aliyor.
+
 """
 from django.contrib.auth import (get_user_model,authenticate,)
 from django.utils.translation import gettext as _
@@ -9,7 +11,7 @@ from rest_framework import serializers
 class UserSerializer(serializers.ModelSerializer):
     """ Serializer for the user object. """
 
-
+    #model iliskilendirme
     class Meta:
         model = get_user_model() # for user model
         fields = ['email','password','name']
