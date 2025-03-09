@@ -53,6 +53,7 @@ class ModelTests(TestCase):
         self.assertTrue(user.is_staff)
 
 
+    #TTD test driven development write test firs
     def test_create_recipe(self):
         """test creating a recipe is succesfull. """
         user  = get_user_model().objects.create_user(
@@ -60,14 +61,14 @@ class ModelTests(TestCase):
             'test@examle.com',
             'testpass123',
         )
-        recipe = models.Recipe.object.create(
+        recipe = models.Recipe.objects.create(
             user = user,
             title = 'sample recipe name',
             time_minutes = 5,
             price = Decimal('5.50'),
             description = "sample recipe decription ",
         )
-        self.asserEqual(str(recipe), recipe.title)
+        self.assertEqual(str(recipe), recipe.title)
 
 
 
